@@ -117,7 +117,7 @@ const NYCSafetyCalculator = () => {
   
   return (
     <div className="max-w-md mx-auto p-6 bg-white rounded-lg shadow-lg">
-      <h1 className="text-2xl font-bold text-center mb-6">NYC Neighborhood Safety Calculator</h1>
+      <h1 className="text-2xl font-bold text-center mb-6">NYC Commute Safety Calculator</h1>
       
       <div className="mb-4">
         <label className="block mb-2">Select your location:</label>
@@ -146,11 +146,11 @@ const NYCSafetyCalculator = () => {
       
       {calculationResult && (
         <div className="mt-6 p-4 bg-gray-100 rounded">
-          <h2 className="text-xl font-semibold mb-2">Results</h2>
-          <p className="mb-1 text-black-600"><strong>Neighborhood:</strong> {calculationResult.neighborhood}</p>
+          <h2 className="text-xl font-semibold mb-2">Don't go to SoHo!</h2>
+          <p className="mb-1 text-black-600">If you go to an event in <strong>{calculationResult.neighborhood}</strong> instead:</p>
           {/*<p className="mb-1"><strong>Local club risk:</strong> {calculationResult.local_risk.toExponential(2)} fatalities/mile</p>
           <p className="mb-1"><strong>SoHo commute risk ({calculationResult.commute_miles}mi):</strong> {calculationResult.soho_risk.toExponential(2)} fatalities</p>*/}
-          <p className="font-bold text-green-600"><strong>Safety improvement:</strong> {calculationResult.percent_safer.toFixed(1)}% reduction</p>
+          <p className="font-bold text-green-600"><strong>Safety improvement:</strong> {calculationResult.percent_safer.toFixed(1)}% lower fatality rate</p>
         </div>
       )}
       
