@@ -14,9 +14,9 @@ const NYCSafetyCalculator = () => {
   // Distance database (miles to SoHo) organized by borough
   const neighborhoodsByBorough = {
     "Manhattan": {
-      "Chelsea": 1,
-      "Tribeca": 1,
-      "East Village": 1,
+      "Chelsea": 0.75,
+      "Tribeca": 0.56,
+      "East Village": 0.63,
       "Upper East Side": 5.0,
       "Upper West Side": 4.0,
       "Harlem": 9.0,
@@ -27,8 +27,8 @@ const NYCSafetyCalculator = () => {
       "Lower East Side": 0.8,
       "Hudson Yards": 3.0,
       "Times Square": 1.0,
-      "Chinatown": 1,
-      "West Village": 1
+      "Chinatown": 0.6,
+      "West Village": 0.83
     },
     "Brooklyn": {
       "Williamsburg": 2.0,
@@ -86,7 +86,7 @@ const NYCSafetyCalculator = () => {
     const commute_miles = soho_distances[neighborhood] || 0;
     
     // Local club risk (assumed 1 mile round trip)
-    const local_risk = 1 * base_fatality_rate;
+    const local_risk = 0.5 * base_fatality_rate;
     
     // SoHo commute risk
     const soho_risk = commute_miles * base_fatality_rate;
@@ -156,7 +156,7 @@ const NYCSafetyCalculator = () => {
       
       <div className="mt-4 text-xs text-gray-500">
         <p>Based on 2024 NYC traffic data</p>
-        <p>Calculation assumes 1-mile round trip for local travel</p>
+        <p>Calculation assumes 0.5-mile round trip for local travel</p>
       </div>
     </div>
   );
