@@ -140,8 +140,8 @@ const NYCSafetyCalculator = () => {
         <div className="mt-6 p-4 bg-gray-100 rounded">
           <h2 className="text-xl font-semibold mb-2">Results</h2>
           <p className="mb-1 text-black-600"><strong>Neighborhood:</strong> {calculationResult.neighborhood}</p>
-          <p className="mb-1"><strong>Local club risk:</strong> {calculationResult.local_risk.toExponential(2)} fatalities/mile</p>
-          <p className="mb-1"><strong>SoHo commute risk ({calculationResult.commute_miles}mi):</strong> {calculationResult.soho_risk.toExponential(2)} fatalities</p>
+          {/*<p className="mb-1"><strong>Local club risk:</strong> {calculationResult.local_risk.toExponential(2)} fatalities/mile</p>
+          <p className="mb-1"><strong>SoHo commute risk ({calculationResult.commute_miles}mi):</strong> {calculationResult.soho_risk.toExponential(2)} fatalities</p>*/}
           <p className="font-bold text-green-600"><strong>Safety improvement:</strong> {calculationResult.percent_safer.toFixed(1)}% reduction</p>
         </div>
       )}
