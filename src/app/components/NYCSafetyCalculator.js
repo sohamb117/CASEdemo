@@ -59,6 +59,10 @@ const NYCSafetyCalculator = () => {
       "Shore Acres": 12.0,
       "South Beach": 13.5,
       "Clove Lakes": 13.9
+    },
+    "Jersey": {
+        "Jersey City": 8.5,
+        "Hoboken": 7.2
     }
   };
   
