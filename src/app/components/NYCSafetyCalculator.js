@@ -62,7 +62,11 @@ const NYCSafetyCalculator = () => {
     },
     "Jersey": {
         "Jersey City": 8.5,
-        "Hoboken": 7.2
+        "Hoboken": 7.2,
+        "Union City": 6.5,
+        "North Bergen": 7.2,
+        "West New York": 7.5,
+        "Guttenberg": 9.2
     }
   };
   
